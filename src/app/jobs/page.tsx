@@ -61,7 +61,8 @@ export default function JobsPage() {
   }
 
   return (
-    <div className="p-6 md:p-10">
+    return (
+  <div className="p-6 md:p-10 pt-20 md:pt-10">
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-3xl font-semibold text-slate-900 dark:text-white tracking-tight">Jobs</h1>
