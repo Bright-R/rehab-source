@@ -19,7 +19,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="flex min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
             <Sidebar />
-            <main className="flex-1 overflow-auto">
+            <main className="flex-1 overflow-auto min-w-0">
               {children}
             </main>
           </div>
