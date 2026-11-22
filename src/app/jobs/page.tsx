@@ -61,16 +61,15 @@ export default function JobsPage() {
   }
 
   return (
-    return (
-  <div className="p-6 md:p-10 pt-20 md:pt-10">
-      <div className="flex items-center justify-between mb-8">
+    <div className="p-4 md:p-10 pt-6 md:pt-10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-3xl font-semibold text-slate-900 dark:text-white tracking-tight">Jobs</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-2">{jobs.length} open position{jobs.length !== 1 ? "s" : ""}</p>
+          <h1 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white tracking-tight">Jobs</h1>
+          <p className="text-slate-500 dark:text-slate-400 mt-1">{jobs.length} open position{jobs.length !== 1 ? "s" : ""}</p>
         </div>
         <button
           onClick={() => setShowForm(!showForm)}
-          className="inline-flex items-center gap-2 rounded-xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-950 px-4 py-2 text-sm font-medium hover:bg-blue-700 dark:hover:bg-cyan-400"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-950 px-4 py-2.5 text-sm font-medium hover:bg-blue-700 dark:hover:bg-cyan-400 w-full sm:w-auto"
         >
           <Plus className="h-4 w-4" />
           New Job
@@ -78,7 +77,7 @@ export default function JobsPage() {
       </div>
 
       {showForm && (
-        <form onSubmit={createJob} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 mb-8 space-y-4">
+        <form onSubmit={createJob} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 mb-6 space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Job Title</label>
@@ -134,13 +133,13 @@ export default function JobsPage() {
       )}
 
       {jobs.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-12 text-center text-slate-500 dark:text-slate-400">
+        <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-10 text-center text-slate-500 dark:text-slate-400">
           No jobs yet. Click “New Job” to create one.
         </div>
       ) : (
         <div className="space-y-3">
           {jobs.map((job) => (
-            <div key={job.id} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div key={job.id} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white">{job.title}</h3>
