@@ -61,7 +61,7 @@ export default function JobsPage() {
   }
 
   return (
-    <div className="p-4 md:p-10 pt-6 md:pt-10">
+    <div className="p-4 md:p-10 pt-20 md:pt-10">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white tracking-tight">Jobs</h1>
