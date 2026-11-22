@@ -71,4 +71,5 @@ export interface NPPESResult {
   zip?: string;
   phone?: string;
   address?: string;
+  distance?: number;
 }
